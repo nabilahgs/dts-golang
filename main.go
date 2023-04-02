@@ -1,9 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/nabilahgs/dts-golang/user"
+)
 
 func main() {
-	fmt.Println("Hello guys")
-	fmt.Println("Hello lagi coy")
-	fmt.Println("ngetest branch")
+	var user1 user.User
+	user1 = user.Teacher{
+		NIP:    1234456,
+		Nama:   "Nabilah",
+		Email:  "nabilah@mail.com",
+		Subjek: "Seventeen",
+	}
+
+	fmt.Printf("Ini yah %+v", user1)
 }
